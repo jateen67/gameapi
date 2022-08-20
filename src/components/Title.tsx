@@ -4,9 +4,9 @@ export default function Title() {
   return (
     <div>
       <Link to="/">
-        <h1>Dealing Chamber</h1>
+        <h1 className="title">Dealing Chamber</h1>
       </Link>
-      <p>
+      <p className="description">
         Find the <strong>cheapest deals</strong> in PC gaming
       </p>
     </div>

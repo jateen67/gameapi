@@ -8,7 +8,7 @@ import ViewGame from "./components/ViewGame";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Title />
       <Routes>
         <Route path="/" element={<SearchGame />} />
