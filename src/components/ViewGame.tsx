@@ -8,6 +8,7 @@ export default function ViewGame() {
 
   useEffect(() => {
     getGame();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getGame = async () => {
