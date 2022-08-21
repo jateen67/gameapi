@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import Title from "./Title";
 
 export default function SearchGame() {
-  const [games, setGames] = useState<any>([]);
+  interface Game {
+    gameID: string;
+    cheapest: string;
+    thumb: string;
+    external: string;
+  }
+
+  const [games, setGames] = useState<Game[]>([]);
   const [search, setSearch] = useState<string>("");
 
   const getGames = async (name: string) => {
@@ -39,7 +46,7 @@ export default function SearchGame() {
         </button>
       </form>
       <div className="container">
-        {games.map((game: any) => {
+        {games.map((game: Game) => {
           return (
             <div className="cell" key={game.gameID}>
               <div className="info">

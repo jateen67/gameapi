@@ -37,12 +37,12 @@ li {
   padding: 2.5em;
 }
 
-.fff {
+.nav-link {
   color: rgb(0, 183, 194);
   transition: 0.2s;
 }
 
-.fff:hover {
+.nav-link:hover {
   color: #6a097d;
   transition: 0.2s;
 }

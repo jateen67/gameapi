@@ -3,8 +3,19 @@ import { useParams } from "react-router-dom";
 import Title from "./Title";
 
 export default function ViewGame() {
-  const [info, setInfo] = useState<any>([]);
-  const [deals, setDeals] = useState<any>([]);
+  interface Info {
+    title: string;
+    thumb: string;
+  }
+
+  interface Deal {
+    dealID: string;
+    price: string;
+    retailPrice: string;
+    savings: number;
+  }
+  const [info, setInfo] = useState<Info>(Object);
+  const [deals, setDeals] = useState<Deal[]>([]);
   const params = useParams();
 
   useEffect(() => {
@@ -21,15 +32,20 @@ export default function ViewGame() {
     setDeals(data.deals);
   };
 
+  const p = () => {
+    console.log(deals);
+  };
+
   return (
     <>
       <Title />
+      <button onClick={p}>sss</button>
       <div>
         <p className="game-title">{info.title}</p>
         <img className="deal-pic" src={info.thumb} alt="thumbnail" />
       </div>
       <div className="container">
-        {deals.map((deal: any) => {
+        {deals.map((deal: Deal) => {
           return (
             <div className="cell deal-cell" key={deal.dealID}>
               <div className="info">
@@ -52,14 +68,12 @@ export default function ViewGame() {
                 </p>
               </div>
               <div className="btn-container">
-                <button className="view-btn">
-                  <a
-                    target="blank"
-                    href={`https://www.cheapshark.com/redirect?dealID=${deal.dealID}`}
-                  >
-                    View Deal
-                  </a>
-                </button>
+                <a
+                  target="blank"
+                  href={`https://www.cheapshark.com/redirect?dealID=${deal.dealID}`}
+                >
+                  <button className="view-btn">View Deal</button>
+                </a>
               </div>
             </div>
           );
