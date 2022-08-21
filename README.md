@@ -11,3 +11,6 @@ Tech used: HTML, CSS, Typescript, React.js
 - Asynchronous API (async/await)
 - JSX, components, props, etc.
 - TypeScript (type system/interfaces)
+
+## Demo
+![ezgif-3-cca31d3e17](https://user-images.githubusercontent.com/106696411/185809806-bb640f95-a8a6-4df7-af3c-42aacdcde65c.gif)
