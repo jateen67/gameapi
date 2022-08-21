@@ -15,4 +15,4 @@ export interface Deal {
   price: string;
   retailPrice: string;
   savings: number;
-}
+} 
