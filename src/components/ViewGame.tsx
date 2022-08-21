@@ -1,19 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Title from "./Title";
+import { Info, Deal } from "../models";
 
 export default function ViewGame() {
-  interface Info {
-    title: string;
-    thumb: string;
-  }
-
-  interface Deal {
-    dealID: string;
-    price: string;
-    retailPrice: string;
-    savings: number;
-  }
   const [info, setInfo] = useState<Info>(Object);
   const [deals, setDeals] = useState<Deal[]>([]);
   const params = useParams();

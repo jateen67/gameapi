@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
@@ -7,6 +8,9 @@ import SearchGame from "./components/SearchGame";
 import ViewGame from "./components/ViewGame";
 
 function App() {
+  useEffect(() => {
+    document.title = "Dealing Chamber";
+  });
   return (
     <div>
       <Navbar />

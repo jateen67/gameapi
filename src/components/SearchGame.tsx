@@ -1,15 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Title from "./Title";
+import { Game } from "../models";
 
 export default function SearchGame() {
-  interface Game {
-    gameID: string;
-    cheapest: string;
-    thumb: string;
-    external: string;
-  }
-
   const [games, setGames] = useState<Game[]>([]);
   const [search, setSearch] = useState<string>("");
 
