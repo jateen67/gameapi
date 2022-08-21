@@ -27,6 +27,26 @@ input:hover {
   transition: 0.2s;
 }
 
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  padding: 2.5em;
+}
+
+.fff {
+  color: rgb(0, 183, 194);
+  transition: 0.2s;
+}
+
+.fff:hover {
+  color: #6a097d;
+  transition: 0.2s;
+}
+
 .title {
   color: #fdcb9e;
   margin-top: 2.5em;

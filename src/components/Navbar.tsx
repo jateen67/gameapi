@@ -6,10 +6,14 @@ export default function Navbar() {
       <nav>
         <ul>
           <li>
-            <Link to={"/"}>Search Games</Link>
+            <Link className="fff" to={"/"}>
+              Search Games
+            </Link>
           </li>
           <li>
-            <Link to={"/about"}>About</Link>
+            <Link className="fff" to={"/about"}>
+              About This Project
+            </Link>
           </li>
         </ul>
       </nav>
