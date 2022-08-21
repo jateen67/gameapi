@@ -11,6 +11,7 @@ function App() {
   useEffect(() => {
     document.title = "Dealing Chamber";
   });
+  
   return (
     <div>
       <Navbar />
