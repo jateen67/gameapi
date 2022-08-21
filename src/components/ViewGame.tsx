@@ -22,14 +22,9 @@ export default function ViewGame() {
     setDeals(data.deals);
   };
 
-  const p = () => {
-    console.log(deals);
-  };
-
   return (
     <>
       <Title />
-      <button onClick={p}>sss</button>
       <div>
         <p className="game-title">{info.title}</p>
         <img className="deal-pic" src={info.thumb} alt="thumbnail" />
