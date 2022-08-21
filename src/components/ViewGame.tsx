@@ -47,8 +47,7 @@ export default function ViewGame() {
                 <p className="game-savings">
                   Savings:
                   <span className="game-savings-number">
-                    {" "}
-                    {Math.round(deal.savings)}%
+                    <strong> {Math.round(deal.savings)}%</strong>
                   </span>
                 </p>
               </div>

@@ -30,7 +30,7 @@ export default function SearchGame() {
       <form onClick={getSearch}>
         <input
           type="text"
-          placeholder="Search a game by name"
+          placeholder="Search for a game"
           value={search}
           onChange={changeSearch}
         />
