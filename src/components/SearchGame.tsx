@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Title from "./Title";
 
 export default function SearchGame() {
   const [games, setGames] = useState<any>([]);
@@ -24,6 +25,8 @@ export default function SearchGame() {
 
   return (
     <>
+      <Title />
+      <p className="title">Game Name</p>
       <form onClick={getSearch}>
         <input
           type="text"
@@ -31,18 +34,31 @@ export default function SearchGame() {
           value={search}
           onChange={changeSearch}
         />
-        <button type="submit">Search</button>
+        <button className="search-btn" type="submit">
+          Search
+        </button>
       </form>
-      {games.map((game: any) => {
-        return (
-          <div key={game.gameID}>
-            <h3>{game.external}</h3>
-            <p>Cheapest price: {game.cheapest}</p>
-            <img src={game.thumb} alt="thumbnail" />
-            <Link to={game.gameID}>View Game</Link>
-          </div>
-        );
-      })}
+      <div className="container">
+        {games.map((game: any) => {
+          return (
+            <div className="cell" key={game.gameID}>
+              <div className="info">
+                <h3 className="game-title">{game.external}</h3>
+                <img className="game-pic" src={game.thumb} alt="thumbnail" />
+                <p className="game-price">
+                  Cheapest:
+                  <span className="game-price-number"> ${game.cheapest}</span>
+                </p>
+              </div>
+              <div className="btn-container">
+                <Link to={game.gameID}>
+                  <button className="view-btn">Check Deals</button>
+                </Link>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }

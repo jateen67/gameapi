@@ -3,31 +3,143 @@ html {
   text-align: center;
 }
 
+* {
+  font-family: "Poppins";
+}
+
 a {
+  color: #ffdcb4;
   text-decoration: none;
 }
 
 input {
   background: transparent;
+  color: #fdcb9e;
+  border: 2px solid transparent;
   border-bottom: 2px solid #00b7c2;
+  padding: 0.667rem;
+  transition: 0.2s;
+  width: auto;
 }
 
 input:hover {
   border: 2px solid #00b7c2;
   transition: 0.2s;
 }
-input:not(:hover) {
-  transition: 0.2s;
-}
 
 .title {
   color: #fdcb9e;
+  margin-top: 2.5em;
+}
+
+.about {
+  color: rgb(0, 183, 194);
+  margin-top: 2.5em;
+}
+
+.about-description {
+  color: rgb(0, 183, 194);
 }
 
 .description {
   color: #519872;
 }
 
+.search-btn {
+  border: none;
+  background: #00b7c2;
+  color: #1b262c;
+  border-radius: 15px;
+  padding: 0.367rem;
+  width: 80px;
+  margin-left: 1rem;
+  transition: 0.2s;
+  margin-bottom: 5em;
+}
+
+.search-btn:hover {
+  background-color: #fdcb9e;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cell {
+  background-color: #3b2e5a;
+  margin: 2em;
+  width: 15em;
+  position: relative;
+}
+
+.deal-cell {
+  height: 14em;
+}
+
+.info {
+  padding: 2em;
+}
+
+.game-title,
+.game-price {
+  color: white;
+}
+
+.game-price-number {
+  color: #bbe1fa;
+}
+
+.game-retail-price {
+  color: red;
+}
+
+.game-savings-number {
+  color: #519872;
+}
+
+.game-savings {
+  color: #fdcb9e;
+}
+
+.view-btn {
+  width: 100%;
+  background-color: #6a097d;
+  color: #ffdcb4;
+  border: none;
+  height: 3em;
+}
+
+.view-btn:hover {
+  background-color: #00005c;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.game-pic {
+  width: 135px;
+}
+
+.deal-pic {
+  margin-bottom: 5em;
+  width: 135px;
+}
+
 .copy {
   color: white;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 2em;
 }

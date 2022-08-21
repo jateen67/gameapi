@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Title from "./Title";
 
 export default function ViewGame() {
   const [info, setInfo] = useState<any>([]);
@@ -22,23 +23,45 @@ export default function ViewGame() {
 
   return (
     <>
+      <Title />
       <div>
-        <img src={info.thumb} alt="thumbnail" />
-        <p>{info.title}</p>
+        <p className="game-title">{info.title}</p>
+        <img className="deal-pic" src={info.thumb} alt="thumbnail" />
       </div>
-      <div>
+      <div className="container">
         {deals.map((deal: any) => {
           return (
-            <div key={deal.dealID}>
-              <p>Price: {deal.price}</p>
-              <p>Retail Price: {deal.retailPrice}</p>
-              <p>Savings: {deal.savings}</p>
-              <a
-                target="blank"
-                href={`https://www.cheapshark.com/redirect?dealID=${deal.dealID}`}
-              >
-                View Deal
-              </a>
+            <div className="cell deal-cell" key={deal.dealID}>
+              <div className="info">
+                <p className="game-price">
+                  Price:
+                  <span className="game-price-number"> ${deal.price}</span>
+                </p>
+                <p className="game-price">
+                  Retail:
+                  <span className="game-retail-price">
+                    {" "}
+                    ${deal.retailPrice}
+                  </span>
+                </p>
+                <p className="game-savings">
+                  Savings:
+                  <span className="game-savings-number">
+                    {" "}
+                    {Math.round(deal.savings)}%
+                  </span>
+                </p>
+              </div>
+              <div className="btn-container">
+                <button className="view-btn">
+                  <a
+                    target="blank"
+                    href={`https://www.cheapshark.com/redirect?dealID=${deal.dealID}`}
+                  >
+                    View Deal
+                  </a>
+                </button>
+              </div>
             </div>
           );
         })}
