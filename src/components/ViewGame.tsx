@@ -27,7 +27,7 @@ export default function ViewGame() {
       <Title />
       <div>
         <p className="game-title">{info.title}</p>
-        <img className="deal-pic" src={info.thumb} alt="thumbnail" />
+        <img className="game-deal-pic" src={info.thumb} alt="thumbnail" />
       </div>
       <div className="container">
         {deals.map((deal: Deal) => {

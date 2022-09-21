@@ -162,3 +162,8 @@ li {
   bottom: 0;
   margin-bottom: 2em;
 }
+
+.no-results {
+  color: rgb(0, 183, 194);
+  margin-bottom: 2em;
+}

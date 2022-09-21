@@ -31,7 +31,7 @@ export default function SearchGame() {
       <form onClick={getSearch}>
         <input
           type="text"
-          placeholder="Search for a game"
+          placeholder="Search for a PC game"
           value={search}
           onChange={changeSearch}
         />
@@ -40,25 +40,29 @@ export default function SearchGame() {
         </button>
       </form>
       <div className="container">
-        {games.map((game: Game) => {
-          return (
-            <div className="cell" key={game.gameID}>
-              <div className="info">
-                <h3 className="game-title">{game.external}</h3>
-                <img className="game-pic" src={game.thumb} alt="thumbnail" />
-                <p className="game-price">
-                  Cheapest:
-                  <span className="game-price-number"> ${game.cheapest}</span>
-                </p>
+        {games.length === 0 ? (
+          <div className="no-results">No results found...</div>
+        ) : (
+          games.map((game: Game) => {
+            return (
+              <div className="cell" key={game.gameID}>
+                <div className="info">
+                  <h3 className="game-title">{game.external}</h3>
+                  <img className="game-pic" src={game.thumb} alt="thumbnail" />
+                  <p className="game-price">
+                    Cheapest:
+                    <span className="game-price-number"> ${game.cheapest}</span>
+                  </p>
+                </div>
+                <div className="btn-container">
+                  <Link to={game.gameID}>
+                    <button className="view-btn">Check Deals</button>
+                  </Link>
+                </div>
               </div>
-              <div className="btn-container">
-                <Link to={game.gameID}>
-                  <button className="view-btn">Check Deals</button>
-                </Link>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })
+        )}
       </div>
     </>
   );
