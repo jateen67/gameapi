@@ -12,7 +12,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link className="nav-link" to={"/about"}>
-              About This Project
+              About Project
             </Link>
           </li>
         </ul>

@@ -27,14 +27,19 @@ input:hover {
   transition: 0.2s;
 }
 
-ul {
+nav {
   text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
 li {
-  display: inline;
-  padding: 2.5em;
+  margin: 1rem 2rem;
+  display: inline-block;
 }
 
 .nav-link {
