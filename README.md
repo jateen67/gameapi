@@ -1,5 +1,7 @@
 # Video Game Deals API
 
+## Website: https://gamedealsapi.web.app/
+
 The purpose of this project was to practice React.js, TypeScript, and API fetching.
 
 This website uses the [CheapShark API](https://apidocs.cheapshark.com/). This API has the data of thousands of PC games. Simply search a game and it will find you the best deals available online with links to purchase it.
